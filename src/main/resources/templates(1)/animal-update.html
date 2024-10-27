@@ -1,0 +1,33 @@
+
+Copy code
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Animal</title>
+</head>
+<body>
+<h1>Update Animal</h1>
+<form th:action="@{/update}" th:object="${animal}" method="post">
+    <input type="hidden" th:field="*{animalId}">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" th:field="*{name}">
+    <br>
+    <label for="scientificName">Scientific Name:</label>
+    <input type="text" id="scientificName" name="scientificName" th:field="*{scientificName}">
+    <br>
+    <label for="species">Species:</label>
+    <input type="text" id="species" name="species" th:field="*{species}">
+    <br>
+    <label for="habitat">Habitat:</label>
+    <input type="text" id="habitat" name="habitat" th:field="*{habitat}">
+    <br>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" th:field="*{description}">
+    <br>
+    <button type="submit">Update</button>
+</form>
+<a href="/all">Back to List</a>
+
+</body>
+</html>
